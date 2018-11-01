@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/ButtonPanel.css';
 import { Button } from './Button';
 
 export class ButtonPanel extends React.Component {
@@ -7,24 +8,26 @@ export class ButtonPanel extends React.Component {
   group3 = ['4', '5', '6', '-'];
   group4 = ['1', '2', '3', '+'];
   group5 = ['0', '.', '='];
+  orange = ['÷','X','-','+','='];
+  wide = ['0'];
 
   render() {
     return (
       <div className='ButtonPanel'>
         <div className='ButtonRow'>
-          { this.group1.map( button => <Button key = { button } name = { button } /> ) }
+          { this.group1.map( button => <Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } /> ) }
         </div>
         <div className='ButtonRow'>
-          { this.group2.map( button => <Button key = { button } name = { button } /> ) }
+          { this.group2.map( button => <Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } /> ) }
         </div>
         <div className='ButtonRow'>
-          { this.group3.map( button => <Button key = { button } name = { button } /> ) }
+          { this.group3.map( button => <Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } /> ) }
         </div>
         <div className='ButtonRow'>
-          { this.group4.map( button => <Button key = { button } name = { button } /> ) }
+          { this.group4.map( button => <Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } /> ) }
         </div>
         <div className='ButtonRow'>
-          { this.group5.map( button => <Button key = { button } name = { button } /> ) }
+          { this.group5.map( button => <Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } /> ) }
         </div>
       </div>
     )

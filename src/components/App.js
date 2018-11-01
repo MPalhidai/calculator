@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../logo.svg';
-import '../App.css';
+import '../css/App.css';
 import { Display } from './Display';
 import { ButtonPanel } from './ButtonPanel';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <Display />
-        <ButtonPanel />
+        <div className="Calculator">
+          <Display />
+          <ButtonPanel />
+        </div>
       </div>
     );
   }
