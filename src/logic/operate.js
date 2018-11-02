@@ -23,7 +23,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
   }
 
-  if(total.c.length > 10) {
+  if(total.toString().length > 10) {
     return total.toExponential(6).toString();
   } else {
     return total.toString();
