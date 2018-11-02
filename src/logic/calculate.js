@@ -51,7 +51,9 @@ const calculate = (data, button) => {
     case '8':
     case '9':
     case '0':
-      data.next += button;
+      if(data.next.length < 12) {
+        data.next += button;
+      }
       break;
 
     default:
