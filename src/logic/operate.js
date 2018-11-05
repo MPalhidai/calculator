@@ -7,19 +7,23 @@ const operate = (numberOne, numberTwo, operation) => {
 
   switch (operation) {
     case '%':
-      total = x.mod(y)
+      total = x.mod(y);
       break;
     case '-':
-      total = x.minus(y)
+      total = x.minus(y);
       break;
     case 'X':
-      total = x.times(y)
+      total = x.times(y);
       break;
     case '÷':
-      total = x.div(y)
+      if(numberTwo === '0') {
+        total = 'undefined';
+      } else {
+        total = x.div(y);
+      }
       break;
     default:
-      total = x.plus(y)
+      total = x.plus(y);
       break;
   }
 

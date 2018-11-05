@@ -22,16 +22,17 @@ const calculate = (data, button) => {
     case '-':
     case '+':
       data.operation = button;
-      if(data.total !== '' && data.next !== '') {
+      // switching operations without '=' takes second operation instead of first
+      if(data.total !== '' && data.total !== 'undefined' && data.next !== '') {
         data.total = operate(data.total, data.next, data.operation);
-      } else if(data.total === '' && data.next !== '') {
+      } else if((data.total === '' || data.total === 'undefined') && data.next !== '') {
         data.total = data.next;
       }
       data.next = '';
       break;
 
     case '=':
-      if(data.total !== '' && data.next !== '') {
+      if(data.total !== '' && data.total !== 'undefined' && data.next !== '') {
         data.total = operate(data.total, data.next, data.operation);
         data.next = '';
       }

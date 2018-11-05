@@ -21,6 +21,16 @@ class App extends React.Component {
     });
   }
 
+  show() {
+    if(this.state.next) {
+      return this.state.next;
+    } else if(this.state.total) {
+      return this.state.total;
+    } else {
+      return '0';
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -28,7 +38,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div className="Calculator">
-          <Display result = { this.state.next ? this.state.next : this.state.total } />
+          <Display result = { this.show() } />
           <ButtonPanel onClick = { this.handleClick } />
         </div>
       </div>

@@ -13,22 +13,25 @@ export class ButtonPanel extends React.Component {
   wide = ['0'];
 
   render() {
+
+    const renderButton = (button) => <Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } onClick = { () => this.props.onClick(button) } />;
+
     return (
       <div className='ButtonPanel'>
         <div className='ButtonRow'>
-          { this.group1.map( button => < Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } onClick = { () => this.props.onClick(button) } /> ) }
+          { this.group1.map( btn => renderButton(btn) ) }
         </div>
         <div className='ButtonRow'>
-          { this.group2.map( button => < Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } onClick = { () => this.props.onClick(button) } /> ) }
+          { this.group2.map( btn => renderButton(btn) ) }
         </div>
         <div className='ButtonRow'>
-          { this.group3.map( button => < Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } onClick = { () => this.props.onClick(button) } /> ) }
+          { this.group3.map( btn => renderButton(btn) ) }
         </div>
         <div className='ButtonRow'>
-          { this.group4.map( button => < Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } onClick = { () => this.props.onClick(button) } /> ) }
+          { this.group4.map( btn => renderButton(btn) ) }
         </div>
         <div className='ButtonRow'>
-          { this.group5.map( button => < Button key = { button } name = { button } color = { this.orange.includes(button) ? 'orange' : 'lightGray'} wide = { this.wide.includes(button) ? true : false } onClick = { () => this.props.onClick(button) } /> ) }
+          { this.group5.map( btn => renderButton(btn) ) }
         </div>
       </div>
     )
