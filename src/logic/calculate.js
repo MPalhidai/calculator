@@ -21,11 +21,11 @@ const calculate = (data, button) => {
     case 'X':
     case '-':
     case '+':
-      data.operation = button;
-      // switching operations without '=' takes second operation instead of first
       if(data.total !== '' && data.total !== 'undefined' && data.next !== '') {
         data.total = operate(data.total, data.next, data.operation);
+        data.operation = button;
       } else if((data.total === '' || data.total === 'undefined') && data.next !== '') {
+        data.operation = button;
         data.total = data.next;
       }
       data.next = '';
