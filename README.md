@@ -1,3 +1,7 @@
+# [Calculator](https://www.michaelpalhidai.com/calculator/)
+
+![screen shot 2018-12-19 at 6 39 43 pm](https://user-images.githubusercontent.com/25018247/50261209-566b7d80-03c0-11e9-8889-a337a551a0fa.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
