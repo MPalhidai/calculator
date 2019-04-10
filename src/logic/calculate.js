@@ -23,11 +23,10 @@ const calculate = (data, button) => {
     case '+':
       if(data.total !== '' && data.total !== 'undefined' && data.next !== '') {
         data.total = operate(data.total, data.next, data.operation);
-        data.operation = button;
       } else if((data.total === '' || data.total === 'undefined') && data.next !== '') {
-        data.operation = button;
         data.total = data.next;
       }
+      data.operation = button;
       data.next = '';
       break;
 
